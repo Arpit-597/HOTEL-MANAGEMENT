@@ -1,0 +1,822 @@
+<%- include("./layouts/header.ejs") %>
+    <!-- main-slider-start -->
+    <section class="main-slider-three">
+        <div class="main-slider-three__carousel solinom-slick__carousel" data-slick-options='{
+			"slidesToShow": 1,
+			"slidesToScroll": 1,
+			"asNavFor": ".main-slider-three__thumb__carousel",
+			"autoplay": true,
+			"fade": true,
+			"autoplaySpeed": 4000,
+			"speed": 2000,
+			"infinite": true,
+			"arrows": false,
+			"dots": false
+
+		}'>
+            <div class="main-slider-three__item">
+                <div class="main-slider-three__bg"
+                    style="background-image: url(assets/images/backgrounds/slider-bg-2-1.jpg);"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-8">
+                            <div class="main-slider-three__content">
+                                <h5 class="main-slider-three__sub-title">The best 5 star hotel</h5>
+                                <div class="main-slider-three__box">
+                                    <h2 class="main-slider-three__title">Find Your Luxury <br> Rooms & Enjoy <br>
+                                        <span>Your Vacation</span>
+                                    </h2>
+                                </div>
+                                <div class="main-slider-three__video">
+                                    <a href="https://www.youtube.com/watch?v=4jnzf1yj48M" class="video-popup">
+                                        <i class="fa-solid fa-play"></i>
+                                        <!-- <i class="ripple"></i> -->
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4">
+                            <div class="main-slider-three__thumb">
+                                <img src="assets/images/backgrounds/slider-2-1.jpg" alt="solinom image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-slider-three__item">
+                <div class="main-slider-three__bg"
+                    style="background-image: url(assets/images/backgrounds/feature-bg-1-1.jpg);"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-8">
+                            <div class="main-slider-three__content">
+                                <h5 class="main-slider-three__sub-title">The best 5 star hotel</h5>
+                                <div class="main-slider-three__box">
+                                    <h2 class="main-slider-three__title">Find Your Luxury <br> Rooms & Enjoy<span>Your
+                                            Vacation</span></h2>
+                                </div>
+                                <div class="main-slider-three__video">
+                                    <a href="https://www.youtube.com/watch?v=4jnzf1yj48M" class="video-popup">
+                                        <i class="fa-solid fa-play"></i>
+                                        <!-- <i class="ripple"></i> -->
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4">
+                            <div class="main-slider-three__thumb">
+                                <img src="assets/images/backgrounds/slider-2-2.jpg" alt="solinom image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-slider-three__item">
+                <div class="main-slider-three__bg"
+                    style="background-image: url(assets/images/backgrounds/slider-3-1.jpg);"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-8">
+                            <div class="main-slider-three__content">
+                                <h5 class="main-slider-three__sub-title">The best 5 star hotel</h5>
+                                <div class="main-slider-three__box">
+                                    <h2 class="main-slider-three__title">Find Your Luxury <br> Rooms & Enjoy<span>Your
+                                            Vacation</span></h2>
+                                </div>
+                                <div class="main-slider-three__video">
+                                    <a href="https://www.youtube.com/watch?v=4jnzf1yj48M" class="video-popup">
+                                        <i class="fa-solid fa-play"></i>
+                                        <!-- <i class="ripple"></i> -->
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4">
+                            <div class="main-slider-three__thumb">
+                                <img src="assets/images/backgrounds/slider-2-3.jpg" alt="solinom image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-slider-three__thumb-carousel">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="main-slider-three__thumb__carousel solinom-slick__carousel" data-slick-options='{
+							"asNavFor": ".main-slider-three__carousel",
+							"slidesToScroll": 1,
+							"autoplay": false,
+							"autoplaySpeed": 3000,
+							"slidesToShow": 2,
+							"infinite": true,
+							"focusOnSelect": true,
+							"dots": false,
+							"arrows": false
+						}'>
+                            <div class="main-slider-three__thumb__item">
+                                <img src="assets/images/backgrounds/slider-s-2-2.jpg" alt="solinom thumb">
+                            </div>
+                            <div class="main-slider-three__thumb__item">
+                                <img src="assets/images/backgrounds/slider-s-2-1.jpg" alt="solinom thumb">
+                            </div>
+                            <div class="main-slider-three__thumb__item">
+                                <img src="assets/images/backgrounds/slider-s-2-3.jpg" alt="solinom thumb">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="banner-form">
+            <div class="banner-form__position wow fadeInUp" data-wow-delay="300ms">
+                <div class="container">
+                    <form class="banner-form__wrapper" action="#">
+                        <div class="row align-items-center">
+                            <div class="col-lg-3">
+                                <div class="banner-form__control">
+                                    <label for="checkin">Checkin</label>
+                                    <input class="form-control" id="checkin" type="date" name="checkin"
+                                        placeholder="22/07/2023">
+                                    <!-- <i class="fa-solid fa-calendar-days"></i> -->
+                                     <i class="fa fa-calendar" style="position: absolute; transform: translate(0px,7px);"></i>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="banner-form__control">
+                                    <label for="checkout">Checkout</label>
+                                    <input class="form-control" id="checkout" type="date" name="checkout"
+                                        placeholder="22/07/2023">
+                                    <!-- <i class="fa-solid fa-calendar-days"></i> -->
+                                     <i class="fa fa-calendar" style="position: absolute; transform: translate(0px,7px);"></i>
+                                </div>
+                            </div>
+                            <div class="col-lg-2">
+                                <div class="banner-form__control">
+                                    <label for="guests">Guests</label>
+                                    <div class="quantity-box">
+                                        <button type="button" class="sub"><i
+                                                class="fa-solid fa-square-minus"></i></button>
+                                        <input id="guests" type="text" value="1">
+                                        <button type="button" class="add"><i
+                                                class="fa-solid fa-square-plus"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="banner-form__control">
+                                    <label for="location">Location</label>
+                                    <select name="location" class="form-select" id="location">
+                                        <option value="" disabled hidden selected>Where to Next?</option>
+                                        <option value="spain">Spain</option>
+                                        <option value="canada">Canada</option>
+                                        <option value="africa">Africa</option>
+                                        <option value="europe">Europe</option>
+                                        <option value="thailand">Thailand</option>
+                                        <option value="dubai">Dubai</option>
+                                        <option value="australia">Australia</option>
+                                        <option value="switzerland">Switzerland</option>
+                                    </select>
+                                    <!-- <i class="fa-solid fa-location-dot"></i> -->
+                                </div>
+                            </div>
+
+                            <div class="col-lg-1">
+                                <div class="banner-form__popup">
+                                    <button class="solinom-btn banner-form__filter">
+                                        <!-- <i class="icon-filter"></i> -->
+                                        <i class="fa-solid fa-filter"></i>
+                                    </button>
+                                    <button type="submit" aria-label="search submit" class="solinom-btn">
+                                        <!-- <i class="icon-sharce"></i> -->
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="explore__form-checkbox-list">
+                                <div class="price-ranger">
+                                    <div class="ranger-min-max-block">
+                                        <div class="ranger-min-max-block__price">
+                                            <span>Price Range from</span>
+                                            <input type="text" readonly class="min">
+                                            <span>To</span>
+                                            <input type="text" readonly class="max">
+                                        </div>
+                                    </div>
+                                    <div id="slider-range"></div>
+                                </div>
+
+                                <div class="bedroom-filter">
+                                    <div class="box-select">
+                                        <label class="title-select">Bathrooms</label>
+                                        <select name="roomSize" class="selectpicker" id="roomSize">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                        </select>
+                                    </div>
+                                    <div class="box-select">
+                                        <label class="title-select">Bedrooms</label>
+                                        <select name="roomSize" class="selectpicker" id="roomSizeTwo">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                        </select>
+                                    </div>
+                                    <div class="box-select">
+                                        <label class="title-select">Type</label>
+                                        <select name="roomSize" class="selectpicker" id="roomSizeThree">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <h3 class="banner-form__popup__title">Amenities:</h3>
+                                <ul class="checkboxes list-unstyled">
+                                    <li>
+                                        <input id="check-2" type="checkbox" name="check">
+                                        <label for="check-2">Air Conditioning</label>
+                                    </li>
+                                    <li>
+                                        <input id="check-3" type="checkbox" name="check">
+                                        <label for="check-3">Disabled Access</label>
+                                    </li>
+                                    <li>
+                                        <input id="check-4" type="checkbox" name="check">
+                                        <label for="check-4">Floor</label>
+                                    </li>
+                                    <li>
+                                        <input id="check-5" type="checkbox" name="check">
+                                        <label for="check-5">Laundry Room</label>
+                                    </li>
+                                    <li>
+                                        <input id="check-6" type="checkbox" name="check">
+                                        <label for="check-6">Gym</label>
+                                    </li>
+                                    <li>
+                                        <input id="check-7" type="checkbox" name="check">
+                                        <label for="check-7">Alarm</label>
+                                    </li>
+                                    <li>
+                                        <input id="check-8" type="checkbox" name="check">
+                                        <label for="check-8">Window Covering</label>
+                                    </li>
+                                    <li>
+                                        <input id="check-9" type="checkbox" name="check">
+                                        <label for="check-9">WiFi</label>
+                                    </li>
+                                    <li>
+                                        <input id="check-10" type="checkbox" name="check">
+                                        <label for="check-10">TV Cable</label>
+                                    </li>
+                                    <li>
+                                        <input id="check-11" type="checkbox" name="check">
+                                        <label for="check-11">Dryer</label>
+                                    </li>
+                                    <li>
+                                        <input id="check-12" type="checkbox" name="check">
+                                        <label for="check-12">Microwave</label>
+                                    </li>
+                                    <li>
+                                        <input id="check-13" type="checkbox" name="check">
+                                        <label for="check-13">Washer</label>
+                                    </li>
+                                    <li>
+                                        <input id="check-14" type="checkbox" name="check">
+                                        <label for="check-14">Refrigerator</label>
+                                    </li>
+                                    <li>
+                                        <input id="check-15" type="checkbox" name="check">
+                                        <label for="check-15">Outdoor Shower</label>
+                                    </li>
+                                    <li>
+                                        <input id="check-16" type="checkbox" name="check">
+                                        <label for="check-16">Garden</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- main-slider-Done -->
+
+    <!-- About Section Start -->
+    <div class="about-one">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="about-one__thumb wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='300ms'>
+                        <div class="about-one__thumb__item">
+                            <img src="assets/images/about/about-1-1.jpg" alt="solinom about">
+                            <div class="about-one__thumb__item__element">
+                                <img src="assets/images/shapes/about-shape-1-1.png" alt>
+                            </div>
+                        </div>
+                        <div class="about-one__thumb__line">
+                            <span></span><span></span><span></span>
+                        </div>
+                        <div class="about-one__thumb__element">
+                            <div class="about-one__thumb__shape">
+                                <img src="assets/images/about/about-s-1-1.png" alt="solinom image">
+                            </div>
+                            <div class="about-one__thumb__shape-two">
+                                <img src="assets/images/shapes/about-shape-1-2.png" alt>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-one__content wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='300ms'>
+                        <div class="sec-title text-start">
+
+                            <img src="assets/images/shapes/sec-title-s-1.png" alt="WELCOME TO HOTEL"
+                                class="sec-title__img" style="max-width: 162px; margin-bottom: -6px; height: 70px;">
+
+
+                            <h6 class="sec-title__tagline bw-split-in-right">WELCOME TO HOTEL</h6>
+
+                            <h3 class="sec-title__title bw-split-in-up">The Best Hotel on the Beach Side</h3>
+                        </div>
+                        <p class="about-one__content__text">It is a long established fact that a reader will be
+                            distracted by the readable content of a page when looking at its layout. The point of using
+                            Lorem Ipsum is that it has a more-or-less normal distribution of letters</p>
+                        <div class="about-one__feature">
+                            <div class="about-one__feature__item">
+                                <div class="about-one__feature__left">
+                                    <div class="about-one__feature__icon">
+                                        <!-- <i class="icon-booking-1"></i> -->
+                                        <i class="fa-solid fa-mobile-screen"></i>
+                                    </div>
+                                    <h4 class="about-one__feature__title"><a href="room-details-2.html">Easy & Quick
+                                            <br> Booking</a></h4>
+                                </div>
+                                <p class="about-one__feature__text">Lorem Ipsum is simply dummy text of the printing .
+                                </p>
+                            </div>
+                            <div class="about-one__feature__item">
+                                <div class="about-one__feature__left">
+                                    <div class="about-one__feature__icon">
+                                        <!-- <i class="icon-hotel-1"></i> -->
+                                        <i class="fa-solid fa-bed"></i>
+                                    </div>
+                                    <h4 class="about-one__feature__title"><a href="room-details-2.html">Best Room <br>
+                                            Selection</a></h4>
+                                </div>
+                                <p class="about-one__feature__text">Lorem Ipsum is simply dummy text of the printing .
+                                </p>
+                            </div>
+                        </div>
+                        <a href="/about" class="about-one__btn solinom-btn solinom-btn--base">Discover More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About Section End -->
+
+    <!-- Feature section Start -->
+    <section class="feature-two feature-two--three">
+        <div class="container">
+            <div class="sec-title text-center">
+
+                <img src="assets/images/shapes/sec-title-s-1.png" alt="Discover our All" class="sec-title__img"
+                    style="max-width: 160px; margin-bottom: -6px; height: 70px;">
+
+                <h6 class="sec-title__tagline bw-split-in-right">Discover our All</h6>
+
+                <h3 class="sec-title__title bw-split-in-up">Featured Amenities</h3>
+            </div>
+            <div class="row gutter-y-30">
+                <div class=" col-xl-3 col-lg-4 col-md-4 col-sm-6">
+                    <div class="feature-two__item wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='100ms'>
+                        <div class="feature-two__item__bg"
+                            style="background-image: url(assets/images/room/feature-1-1.jpg);"></div>
+                        <div class="feature-two__item__icon">
+                            <i class="fa-solid fa-square-parking"></i>
+                        </div>
+                        <div class="feature-two__item__content">
+                            <h3 class="feature-two__item__title">Free Parking</h3>
+                            <p class="feature-two__item__text">It is a long established fact that a reader will be
+                                distred by the readable </p>
+                            <a href="room-details-3.html" class="solinom-btn solinom-btn--base">Read More</a>
+                        </div>
+                        <div class="feature-two__item__element"><img src="assets/images/shapes/frame-1-1.png" alt></div>
+                        <div class="feature-two__item__element-two"><img src="assets/images/shapes/frame-1-2.png" alt>
+                        </div>
+                    </div>
+                </div>
+                <div class=" col-xl-3 col-lg-4 col-md-4 col-sm-6">
+                    <div class="feature-two__item feature-two__item--two wow fadeInUp" data-wow-duration='1500ms'
+                        data-wow-delay='300ms'>
+                        <div class="feature-two__item__bg"
+                            style="background-image: url(assets/images/room/room-1-1.jpg);"></div>
+                        <div class="feature-two__item__content">
+                            <h3 class="feature-two__item__title">Wifi Internet</h3>
+                            <p class="feature-two__item__text">It is a long established fact that a reader will be
+                                distred by the readable </p>
+                            <a href="room-details-3.html" class="solinom-btn solinom-btn--base">Read More</a>
+                        </div>
+                        <div class="feature-two__item__icon">
+                            <i class="fa-solid fa-house-signal"></i>
+                        </div>
+
+                        <div class="feature-two__item__element-three"><img src="assets/images/shapes/frame-1-3.png" alt>
+                        </div>
+                        <div class="feature-two__item__element-fore"><img src="assets/images/shapes/frame-1-4.png" alt>
+                        </div>
+                    </div>
+                </div>
+                <div class=" col-xl-3 col-lg-4 col-md-4 col-sm-6">
+                    <div class="feature-two__item wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='500ms'>
+                        <div class="feature-two__item__bg"
+                            style="background-image: url(assets/images/room/room-1-2.jpg);"></div>
+                        <div class="feature-two__item__icon">
+                            <i class="fa-solid fa-headset"></i>
+                        </div>
+                        <div class="feature-two__item__content">
+                            <h3 class="feature-two__item__title">24/7 Support</h3>
+                            <p class="feature-two__item__text">It is a long established fact that a reader will be
+                                distred by the readable </p>
+                            <a href="room-details-3.html" class="solinom-btn solinom-btn--base">Read More</a>
+                        </div>
+                        <div class="feature-two__item__element"><img src="assets/images/shapes/frame-1-1.png" alt></div>
+                        <div class="feature-two__item__element-two"><img src="assets/images/shapes/frame-1-2.png" alt>
+                        </div>
+                    </div>
+                </div>
+                <div class=" col-xl-3 col-lg-4 col-md-4 col-sm-6">
+                    <div class="feature-two__item feature-two__item--two wow fadeInUp" data-wow-duration='1500ms'
+                        data-wow-delay='700ms'>
+                        <div class="feature-two__item__bg"
+                            style="background-image: url(assets/images/room/room-1-3.jpg);"></div>
+                        <div class="feature-two__item__content">
+                            <h3 class="feature-two__item__title">daily Breakfast</h3>
+                            <p class="feature-two__item__text">It is a long established fact that a reader will be
+                                distred by the readable </p>
+                            <a href="room-details-3.html" class="solinom-btn solinom-btn--base">Read More</a>
+                        </div>
+                        <div class="feature-two__item__icon">
+                            <i class="fa-solid fa-mug-saucer"></i>
+                        </div>
+
+                        <div class="feature-two__item__element-three"><img src="assets/images/shapes/frame-1-3.png" alt>
+                        </div>
+                        <div class="feature-two__item__element-fore"><img src="assets/images/shapes/frame-1-4.png" alt>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Feature section End -->
+
+    <!-- Benefit Section Start -->
+    <section class="benefit-one">
+        <div class="benefit-one__bg" style="background-image: url(assets/images/shapes/benefit-bg.png);"></div>
+        <div class="container">
+            <div class="row gutter-y-30">
+                <div class="col-xl-7">
+                    <div class="benefit-one__content wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='300ms'>
+                        <div class="sec-title text-start">
+
+                            <img src="assets/images/shapes/sec-title-s-1.png" alt="Our Benefits" class="sec-title__img"
+                                style="max-width: 118px; margin-bottom: -6px; height: 60px;">
+
+
+                            <h6 class="sec-title__tagline bw-split-in-right">Our Benefits</h6>
+
+                            <h3 class="sec-title__title bw-split-in-up">Enjoy The Hotel Quality & Best Hospitality</h3>
+                        </div>
+                        <p class="benefit-one__text">It is a long established fact that a reader will be distracted by
+                            the readable content of a page when looking at its layout. The point of using Lorem Ipsum is
+                            that it has a more-or-less normal distribution of letters</p>
+                        <div class="row gutter-y-30">
+                            <div class="col-md-5">
+                                <div class="benefit-one__video">
+                                    <div class="benefit-one__video__bg"
+                                        style="background-image: url(assets/images/about/benefit-video-1-1.jpg);"></div>
+                                    <a href="https://www.youtube.com/watch?v=4jnzf1yj48M"
+                                        class="benefit-one__video__item video-popup">
+                                        <i class="fa-solid fa-play"></i>
+                                        <!-- <i class="ripple"></i> -->
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="benefit-one__feature__item">
+                                    <div class="benefit-one__feature__icon">
+                                        <!-- <i class="icon-bed-1"></i> -->
+                                        <span class="material-symbols-outlined" style="font-size: 40px;">
+                                            bed
+                                        </span>
+                                    </div>
+                                    <div class="benefit-one__feature__funfact count-box">
+                                        <h3 class="benefit-one__feature__count">
+                                            <span class="benefit-one__feature__count__item count-text" data-stop="420"
+                                                data-speed="1500"></span>
+                                            <span>+</span>
+                                        </h3>
+                                        <p class="benefit-one__feature__text">Luxury Room</p>
+                                    </div>
+                                    <div class="benefit-one__feature__thumb">
+                                        <img src="assets/images/about/benefit-s-1-1.jpg" alt="solinom image">
+                                    </div>
+                                </div>
+                                <div class="benefit-one__feature__item">
+                                    <div class="benefit-one__feature__icon">
+                                        <!-- <i class="icon-red-carpet"></i> -->
+                                        <span class="material-symbols-outlined" style="font-size: 40px;">
+                                            directions_walk
+                                        </span>
+                                    </div>
+                                    <div class="benefit-one__feature__funfact count-box">
+                                        <h3 class="benefit-one__feature__count">
+                                            <span class="benefit-one__feature__count__item count-text" data-stop="560"
+                                                data-speed="1500"></span>
+                                            <span>+</span>
+                                        </h3>
+                                        <p class="benefit-one__feature__text">Guest Visit</p>
+                                    </div>
+                                    <div class="benefit-one__feature__thumb">
+                                        <img src="assets/images/about/benefit-s-1-2.jpg" alt="solinom image">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-5">
+                    <div class="benefit-one__right wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='300ms'>
+                        <div class="benefit-one__item">
+                            <div class="benefit-one__item__thumb">
+                                <img src="assets/images/about/benefit-1-1.jpg" alt="solinom image">
+                            </div>
+                            <div class="benefit-one__item__content">
+                                <h4 class="benefit-one__item__title">Best Restaurant</h4>
+                                <p class="benefit-one__item__text">It is a long established fact that a reader will be
+                                    distracted by the readable content of a page when looking at its layout. </p>
+                                <a href="blog-details-left.html" class="solinom-btn solinom-btn--base">Read More</a>
+                            </div>
+                        </div>
+                        <div class="benefit-one__item">
+                            <div class="benefit-one__item__content benefit-one__item__content--two">
+                                <h4 class="benefit-one__item__title">Spa Wellness</h4>
+                                <p class="benefit-one__item__text">It is a long established fact that a reader will be
+                                    distracted by the readable content of a page when looking at its layout. </p>
+                                <a href="blog-details-left.html" class="solinom-btn solinom-btn--base">Read More</a>
+                            </div>
+                            <div class="benefit-one__item__thumb benefit-one__item__thumb--two">
+                                <img src="assets/images/about/benefit-1-2.jpg" alt="solinom image">
+                            </div>
+                        </div>
+                        <div class="benefit-one__icon">
+                            <center>
+                                <img src="assets/images/about/icon.png" alt="logo" width="100px"
+                                    style="transform: translate(-16px, -5px) ;">
+                            </center>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Benefit Section End -->
+
+    <!-- Reviews section Start -->
+    <section class="reviews-one">
+        <div class="container">
+            <div class="sec-title text-center">
+
+                <img src="assets/images/shapes/sec-title-s-1.png" alt="Customer Reviews" class="sec-title__img"
+                    style="max-width: 170px; margin-bottom: -6px; height: 80px;">
+
+
+                <h6 class="sec-title__tagline bw-split-in-right">Customer Reviews</h6>
+
+                <h3 class="sec-title__title bw-split-in-up">What They're Saying</h3>
+            </div>
+            <div class="reviews-one__carousel solinom-owl__carousel owl-carousel owl-theme" data-owl-options='{
+				"items": 1,
+				"margin": 0,
+				"loop": true,
+				"smartSpeed": 700,
+				"nav": false,
+				"dots": false,
+				"autoplay": true,
+				"responsive": {
+					"0": {
+						"items": 1
+					},
+					"768": {
+						"items": 2,
+						"margin": 30
+					},
+					"992": {
+						"items": 2,
+						"margin": 30
+					},
+					"1199": {
+						"items": 3,
+						"margin": 30
+					}
+				}
+			}'>
+                <div class="item">
+                    <div class="review-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='100ms'>
+                        <div class="review-card__content">
+                            <div class="review-card__star">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                    class="size-6" width="23px" style="transform: translate(3px,-7px);" >
+                                    <path fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                    class="size-6" width="23px" style="transform: translate(3px,-7px);" >
+                                    <path fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                    class="size-6" width="23px" style="transform: translate(3px,-7px);" >
+                                    <path fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <span class="material-symbols-outlined">
+                                    star_rate_half
+                                </span>
+                                <span class="material-symbols-outlined">
+                                    star_rate
+                                </span>
+
+                            </div>
+                            <p class="review-card__text">It is a long established fact that a reader will be distracted
+                                by the readable content of a page when looking at its layout. The point of using Lorem
+                                Ipsum is that it has a more</p>
+                            <div class="review-card__author">
+                                <div class="review-card__author__thumb">
+                                    <img src="assets/images/resources/review-1-1.jpg" alt="Floyd Miles">
+                                </div>
+                                <div class="review-card__author__content">
+                                    <h6 class="review-card__author__name">Floyd Miles</h6>
+                                    <span class="review-card__author__subtitle">Guest</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review-card__element">
+                            <img src="assets/images/shapes/testimonials-1-1.png" style="transform: translate(0,6px);" alt>
+                        </div>
+                        <div class="review-card__hover-element">
+                            <img src="assets/images/shapes/testimonials-hover-1-1.png" style="transform: translate(0,6px);"  alt>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+
+                    <div class="review-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='300ms'>
+                        <div class="review-card__content">
+                            <div class="review-card__star">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                    class="size-6" width="23px" style="transform: translate(3px,-7px);" >
+                                    <path fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                    class="size-6" width="23px" style="transform: translate(3px,-7px);" >
+                                    <path fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                    class="size-6" width="23px" style="transform: translate(3px,-7px);" >
+                                    <path fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                    class="size-6" width="23px" style="transform: translate(3px,-7px);" >
+                                    <path fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <span class="material-symbols-outlined">
+                                    star_rate_half
+                                </span>
+                                
+                            </div>
+                            <p class="review-card__text">It is a long established fact that a reader will be distracted
+                                by the readable content of a page when looking at its layout. The point of using Lorem
+                                Ipsum is that it has a more</p>
+                            <div class="review-card__author">
+                                <div class="review-card__author__thumb">
+                                    <img src="assets/images/resources/review-1-2.jpg" alt="Robert Fox">
+                                </div>
+                                <div class="review-card__author__content">
+                                    <h6 class="review-card__author__name">Robert Fox</h6>
+                                    <span class="review-card__author__subtitle">Guest</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review-card__element">
+                            <img src="assets/images/shapes/testimonials-1-1.png" style="transform: translate(0,6px);"  alt>
+                        </div>
+                        <div class="review-card__hover-element">
+                            <img src="assets/images/shapes/testimonials-hover-1-1.png" style="transform: translate(0,6px);"  alt>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="review-card wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='500ms'>
+                        <div class="review-card__content">
+                            <div class="review-card__star">
+                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                    class="size-6" width="23px" style="transform: translate(3px,-7px);" >
+                                    <path fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                    class="size-6" width="23px" style="transform: translate(3px,-7px);" >
+                                    <path fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                    class="size-6" width="23px" style="transform: translate(3px,-7px);" >
+                                    <path fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                    class="size-6" width="23px" style="transform: translate(3px,-7px);" >
+                                    <path fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                    class="size-6" width="23px" style="transform: translate(3px,-7px);" >
+                                    <path fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <p class="review-card__text">It is a long established fact that a reader will be distracted
+                                by the readable content of a page when looking at its layout. The point of using Lorem
+                                Ipsum is that it has a more</p>
+                            <div class="review-card__author">
+                                <div class="review-card__author__thumb">
+                                    <img src="assets/images/resources/review-1-3.jpg" alt="Jerome Bell">
+                                </div>
+                                <div class="review-card__author__content">
+                                    <h6 class="review-card__author__name">Jerome Bell</h6>
+                                    <span class="review-card__author__subtitle">Guest</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review-card__element">
+                            <img src="assets/images/shapes/testimonials-1-1.png" style="transform: translate(0,6px);"  alt>
+                        </div>
+                        <div class="review-card__hover-element">
+                            <img src="assets/images/shapes/testimonials-hover-1-1.png" style="transform: translate(0,6px);"  alt>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Reviews section End -->
+
+
+
+
+
+
+
+
+    <%- include("./layouts/footer.ejs") %>

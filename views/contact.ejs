@@ -1,0 +1,115 @@
+<%- include("./layouts/header.ejs") %>
+<section class="page-header">
+            <div class="page-header__bg" style="background-image: url(/assets/images/backgrounds/header-bg.jpg);"></div>
+            <div class="container">
+                <img src="/assets/images/shapes/page-header-s-1.png" alt="Contact" class="page-header__shape" style="max-width: 155px; margin-bottom: -6px; height: 70px;">
+                <h2 class="page-header__title">Contact</h2>
+                <ul class="solinom-breadcrumb list-unstyled">
+                    <li><a href="index.html">Home</a></li>
+                    <li><span>Contact</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="contact-one">
+            <div class="container">
+                <div class="contact-one__inner">
+                    <div class="row gutter-y-30">
+                        <div class="col-lg-7">
+                            <form class="contact-one__form contact-form-validated form-one wow fadeInLeft" data-wow-delay='300ms' data-wow-duration="1500ms" action="inc/sendemail.php">
+                                <div class="contact-one__form__top">
+                                    <div class="sec-title text-start">
+
+                                        <img src="/assets/images/shapes/sec-title-s-1.png" alt="Contact with us" class="sec-title__img" style="max-width: 150px; margin-bottom: -6px; height: 70px;">
+
+
+                                        <h6 class="sec-title__tagline bw-split-in-right">Contact with us</h6>
+
+                                        <h3 class="sec-title__title bw-split-in-up">Feel Free to Write us Anytime</h3>
+                                    </div>
+                                </div>
+                                <div class="form-one__group">
+                                    <div class="form-one__control">
+                                        <input type="text" name="name" placeholder="Your Name">
+                                    </div>
+                                    <div class="form-one__control">
+                                        <input type="email" name="email" placeholder="Email Address">
+                                    </div>
+                                    <div class="form-one__control ">
+                                        <input type="text" name="phone" placeholder="Phone">
+                                    </div>
+                                    <div class="form-one__control">
+                                        <input type="text" name="subject" placeholder="Subject">
+                                    </div>
+                                    <div class="form-one__control form-one__control--full">
+                                        <textarea name="message" placeholder="Write a Message"></textarea>
+                                    </div>
+                                    <div class="form-one__control">
+                                        <button type="submit" class="solinom-btn solinom-btn--base">Send a Message</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="contact-one__right wow fadeInRight" data-wow-duration='1500ms' data-wow-delay='300ms'>
+                                <div class="contact-one__content">
+                                    <div class="contact-one__content__top">
+                                        <h4 class="contact-one__content__title">Contact Information</h4>
+                                    </div>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <div class="contact-one__content__icon">
+                                                <i class="icon-telephone"></i>
+                                            </div>
+                                            <div class="contact-one__content__inner">
+                                                <span class="contact-one__content__subtitle">Have any question?</span>
+                                                <a href="tel:123456789" class="contact-one__content__link">Free + 23 (000)-8050</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="contact-one__content__icon">
+                                                <i class="icon-emai2"></i>
+                                            </div>
+                                            <div class="contact-one__content__inner">
+                                                <span class="contact-one__content__subtitle">Send Email</span>
+                                                <a href="mailto:demo@gmail.com" class="contact-one__content__link">demo@gmail.com</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="contact-one__content__icon">
+                                                <i class="icon-pin"></i>
+                                            </div>
+                                            <div class="contact-one__content__inner">
+                                                <span class="contact-one__content__subtitle">Visit Anytime</span>
+                                                <a href="javascript:void(0)" class="contact-one__content__link">6391 Elgin St. Delaware 10299</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="contact-one__content__thumb">
+                                        <img src="/assets/images/resources/contact-1-1.png" alt="solinom image">
+                                    </div>
+                                    <div class="contact-one__content__social">
+                                        <a href="https://facebook.com"> <i class="icon-facebook-f" aria-hidden="true"></i> <span class="sr-only">Facebook</span></a>
+                                        <a href="https://twitter.com"> <i class="icon-x-twitter" aria-hidden="true"></i> <span class="sr-only">Twitter</span></a>
+                                        <a href="https://pinterest.com"> <i class="icon-pinterest-p" aria-hidden="true"></i> <span class="sr-only">Pinterest</span></a>
+                                        <a href="https://youtube.com"> <i class="icon-youtube" aria-hidden="true"></i> <span class="sr-only">youtube</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="contact-map">
+            <div class="container">
+                <div class="google-map google-map__contact">
+                    <iframe title="template google map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4562.753041141002!2d-118.80123790098536!3d34.152323469614075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80e82469c2162619%3A0xba03efb7998eef6d!2sCostco+Wholesale!5e0!3m2!1sbn!2sbd!4v1562518641290!5m2!1sbn!2sbd" class="map__contact" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <%- include("./layouts/footer.ejs") %>  

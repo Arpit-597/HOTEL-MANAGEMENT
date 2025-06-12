@@ -1,0 +1,1054 @@
+<%- include("../layouts/header.ejs") %>
+<!-- Gallery Top start -->
+<div class="gallery-top">
+  <div class="gallery-top__carousel solinom-owl__carousel owl-carousel owl-theme" data-owl-options='{
+        "items": 1,
+        "margin": 0,
+        "loop": true,
+        "smartSpeed": 700,
+        "nav": false, 
+        "dots": false,
+        "autoplay": true,
+        "responsive": {
+            "0": {
+                "items": 1
+            },
+            "576": {
+                "items": 2,
+                "margin": 20
+            },
+            "992": {
+                "items": 3,
+                "margin": 20
+            },
+            "992": {
+                "items": 4,
+                "margin": 20
+            }
+        }
+    }'>
+    <div class="item">
+      <div class="gallery-top__card">
+        <img src="/assets/images/room/room-d-1-1.jpg" alt="solinom image">
+      </div>
+    </div>
+    <div class="item">
+      <div class="gallery-top__card">
+        <img src="/assets/images/room/room-d-1-2.jpg" alt="solinom image">
+      </div>
+    </div>
+    <div class="item">
+      <div class="gallery-top__card">
+        <img src="/assets/images/room/room-d-1-3.jpg" alt="solinom image">
+      </div>
+    </div>
+    <div class="item">
+      <div class="gallery-top__card">
+        <img src="/assets/images/room/room-d-1-4.jpg" alt="solinom image">
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Gallery Top End -->
+
+<div class="room-details">
+  <div class="container">
+    <div class="row gutter-y-30">
+      <div class="col-lg-8">
+        <div class="room-details__item wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='300ms'>
+          <div class="room-details__room-info">
+            <div class="room-details__room-info__top">
+              <div class="room-details__room-info__left">
+                <h2 class="room-details__room-info__title">
+                  <%= room.title %>
+                </h2>
+                <p class="room-details__room-info__form">From <span>₹<%= room.pricePerNight%></span>
+                  Per Night</p>
+              </div>
+              <p class="room-details__room-info__rating"><i class="icon-star1"></i>
+                <%= roomRating%>(<%= reviewsCount %> Reviews)
+              </p>
+            </div>
+            <div class="room-details__room-info__bottom">
+              <div class="room-details__room-info__bottom__left">
+                <div class="room-details__room-info__bottom__item">
+                  <div class="room-details__room-info__bottom__icon">
+                    <i class="icon-audience"></i>
+                  </div>
+                  <div class="room-details__room-info__bottom__content">
+                    <h5 class="room-details__room-info__bottom__title">
+                      <%= room.maxGuests %> Person
+                    </h5>
+                    <span class="room-details__room-info__bottom__subtitle">Guests</span>
+                  </div>
+                </div>
+                <div class="room-details__room-info__bottom__item">
+                  <div class="room-details__room-info__bottom__icon">
+                    <i class="icon-clock"></i>
+                  </div>
+                  <div class="room-details__room-info__bottom__content">
+                    <h5 class="room-details__room-info__bottom__title">
+                      <%= room.durationDays %> days
+                    </h5>
+                    <span class="room-details__room-info__bottom__subtitle">Duration</span>
+                  </div>
+                </div>
+                <div class="room-details__room-info__bottom__item">
+                  <div class="room-details__room-info__bottom__icon">
+                    <i class="icon-selection"></i>
+                  </div>
+                  <div class="room-details__room-info__bottom__content">
+                    <h5 class="room-details__room-info__bottom__title">
+                      <%= room.totalGuestsServed %>
+                    </h5>
+                    <span class="room-details__room-info__bottom__subtitle">Guests Served</span>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="room-details__room-info__bottom__right">
+                                    <a href="javascript:void(0)" class="room-details__room-info__bottom__right__item"><i
+                                            class="icon-Heart"></i>Hello</a>
+                                    <a href="javascript:void(0)" class="room-details__room-info__bottom__right__item"><i
+                                            class="icon-share"></i></a>
+                                </div> -->
+            </div>
+          </div>
+        </div>
+        <div class="room-details__item wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='300ms'>
+          <div class="room-details__info">
+            <h3 class="room-details__title">Overview</h3>
+            <p class="room-details__text">
+              <%= room.description %>
+            </p>
+          </div>
+        </div>
+        <hr>
+        <div class="room-details__item wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='300ms'>
+          <!-- <div class="room-details__amenities">
+                            <h3 class="room-details__title">Amenities</h3>
+                            <ul class="room-details__amenities__list list-unstyled">
+                                <li class="room-details__amenities__item"><i class="icon-mark"></i>Conditioning</li>
+                                <li class="room-details__amenities__item"><i class="icon-mark"></i>Lawn</li>
+                                <li class="room-details__amenities__item"><i class="icon-mark"></i>TV Cable</li>
+                                <li class="room-details__amenities__item"><i class="icon-mark"></i>Barbeque</li>
+                                <li class="room-details__amenities__item"><i class="icon-mark"></i>Microwave</li>
+                                <li class="room-details__amenities__item"><i class="icon-mark"></i>Washer</li>
+                                <li class="room-details__amenities__item"><i class="icon-mark"></i>Dryer</li>
+                                <li class="room-details__amenities__item"><i class="icon-mark"></i>Refrigerator</li>
+                                <li class="room-details__amenities__item"><i class="icon-mark"></i>WiFi</li>
+                                <li class="room-details__amenities__item"><i class="icon-mark"></i>Gym</li>
+                                <li class="room-details__amenities__item"><i class="icon-close"></i>Sauna</li>
+                                <li class="room-details__amenities__item"><i class="icon-mark"></i>Window Coverings</li>
+                                <li class="room-details__amenities__item"><i class="icon-close"></i>Laundry</li>
+                                <li class="room-details__amenities__item"><i class="icon-mark"></i>Swimming Pool</li>
+                            </ul>
+                        </div> -->
+          <div class="room-details__amenities">
+            <h3 class="room-details__title">Amenities</h3>
+            <ul class="room-details__amenities__list list-unstyled">
+              <% allAmenities.forEach(amenity=> { %>
+              <li class="room-details__amenities__item">
+                <% if (room.amenities.includes(amenity)) { %>
+                <i class="icon-mark"></i>
+                <% } else { %>
+                <i class="icon-close"></i>
+                <% } %>
+                <%= amenity %>
+              </li>
+              <% }) %>
+            </ul>
+          </div>
+
+        </div>
+        <div class="room-details__item wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='300ms'>
+          <div class="room-details__calender">
+            <h3 class="room-details__title">Calendar & Price</h3>
+            <div class="room-details__calender__calender-box">
+              <div class="solinom-datepicker"></div>
+            </div>
+          </div>
+        </div>
+        <div class="room-details__item wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='300ms'>
+          <div class="room-details__location">
+            <h3 class="room-details__title">Location</h3>
+            <div class="room-details__location__item">
+              <div class="google-map google-map__contact">
+                <iframe title="MITS Gwalior Location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3609.695437252823!2d78.2079!3d26.2317!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3976c3f9b3d3d3d3%3A0x5f8e2e32cfb4ac4c!2sMadhav%20Institute%20of%20Technology%20and%20Science%2C%20Gwalior%2C%20Madhya%20Pradesh%20474005!5e0!3m2!1sen!2sin!4v1717326891544!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="room-details__item wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='300ms'>
+          <div class="room-details__review">
+            <h3 class="room-details__title">Review Score</h3>
+            <div class="room-details__review__inner">
+              <div class="room-details__review__left">
+                <h4 class="room-details__review__rating">
+                  <%= roomRating %>
+                </h4>
+                <p class="room-details__review__rating__text">
+                  <i class="icon-star1"></i>
+                  <% if (roomRating>= 4.5) { %>
+                  Awesome
+                  <% } else if (roomRating>= 4.0) { %>
+                  Very Good
+                  <% } else if (roomRating>= 3.0) { %>
+                  Good
+                  <% } else if (roomRating>= 2.0) { %>
+                  Average
+                  <% } else if (roomRating> 0) { %>
+                  Poor
+                  <% } else { %>
+                  Not Rated
+                  <% } %>
+                </p>
+              </div>
+              <div class="room-details__review__right">
+                <div class="room-details__review__progress">
+                  <h4 class="room-details__review__progress__title">Service</h4>
+                  <div class="room-details__review__progress__bar">
+                    <div class="room-details__review__progress__inner count-bar" data-percent="<%= avgService %>%">
+                    </div>
+                    <div class="room-details__review__progress__number count-text">
+                      <%= avgService %>%
+                    </div>
+                  </div>
+                </div>
+                <div class="room-details__review__progress">
+                  <h4 class="room-details__review__progress__title">Location</h4>
+                  <div class="room-details__review__progress__bar">
+                    <div class="room-details__review__progress__inner count-bar" data-percent="<%= avgLocation %>%">
+                    </div>
+                    <div class="room-details__review__progress__number count-text">
+                      <%= avgLocation %>%
+                    </div>
+                  </div>
+                </div>
+                <div class="room-details__review__progress">
+                  <h4 class="room-details__review__progress__title">Amenities</h4>
+                  <div class="room-details__review__progress__bar">
+                    <div class="room-details__review__progress__inner count-bar" data-percent="<%= avgAmenities %>%">
+                    </div>
+                    <div class="room-details__review__progress__number count-text">
+                      <%= avgAmenities %>%
+                    </div>
+                  </div>
+                </div>
+                <div class="room-details__review__progress">
+                  <h4 class="room-details__review__progress__title">Prices</h4>
+                  <div class="room-details__review__progress__bar">
+                    <div class="room-details__review__progress__inner count-bar" data-percent="<%= avgPrices %>%">
+                    </div>
+                    <div class="room-details__review__progress__number count-text">
+                      <%= avgPrices %>%
+                    </div>
+                  </div>
+                </div>
+                <div class="room-details__review__progress">
+                  <h4 class="room-details__review__progress__title">Food</h4>
+                  <div class="room-details__review__progress__bar">
+                    <div class="room-details__review__progress__inner count-bar" data-percent="<%= avgFood %>%"></div>
+                    <div class="room-details__review__progress__number count-text">
+                      <%= avgFood %>%
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="room-details__item wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='300ms'>
+          <ul class="room-details__posts list-unstyled">
+            <% if (reviews && reviews.length) { %>
+            <% reviews.forEach((review)=> { %>
+            <li class="room-details__posts__card">
+              <div class="room-details__posts__card__image">
+                <img src="<%= review.userId?.image.url || '/assets/images/default-avatar.png' %>" alt="image" width="100">
+              </div>
+              <div class="room-details__posts__card__content">
+                <h3 class="room-details__posts__card__title">
+                  <%= review.name %>
+                  <span class="room-details__posts__card__time">
+                    <%= review.createdAt.toDateString() %>
+                  </span>
+                </h3>
+                <div class="room-details__posts__card__star">
+                  <% ratingmeasures.forEach(category=> { %>
+                  <p class="room-details__posts__card__star__item">
+                    <span>
+                      <%= category.replace("Rating", "" ) %>
+                    </span>
+                    <% for (let i=1; i <=5; i++) { %>
+                    <% if (i <=review[category]) { %>
+                    <i class="fas fa-star"></i>
+                    <% } else { %>
+                    <i class="far fa-star"></i>
+                    <% } %>
+                    <% } %>
+                  </p>
+                  <% }) %>
+                </div>
+                <p class="room-details__posts__card__text">
+                  <%= review.message %>
+                </p>
+
+                <!-- <div class="room-details__posts__card__btn">
+                                                <a href="blog-details-right.html"
+                                                    class="solinom-btn room-details__posts__card__reply">Reply</a>
+                                            </div> -->
+
+                <div class="room-details__posts__card__btn">
+                  <% if (user) { %>
+                  <button class="solinom-btn room-details__posts__card__reply reply-btn" data-review-id="<%= review._id %>">
+                    Reply
+                  </button>
+                  <% } %>
+
+                  <% if (review.replyCount> 0) { %>
+                  <button class="solinom-btn replies-toggle-btn" data-review-id="<%= review._id %>">
+                    <i class="fas fa-comments"></i>
+                    Replies (<%= review.replyCount %>)
+                    <i class="fas fa-chevron-down toggle-icon"></i>
+                  </button>
+                  <% } %>
+                </div>
+
+                <!-- Reply Form (Hidden by default) -->
+                <div class="reply-form" id="reply-form-<%= review._id %>" style="display: none;">
+                  <form class="reply-form-inner" data-review-id="<%= review._id %>">
+                    <div class="form-group">
+                      <textarea class="form-control" name="message" placeholder="Write your reply..." required></textarea>
+                    </div>
+                    <div class="form-actions">
+                      <button type="submit" class="solinom-btn">Post Reply</button>
+                      <button type="button" class="solinom-btn cancel-reply">Cancel</button>
+                    </div>
+                  </form>
+                </div>
+
+                <!-- Replies Container -->
+                <div class="replies-container" id="replies-<%= review._id %>" style="display: none;">
+                  <!-- Replies will be loaded here dynamically -->
+                </div>
+
+
+              </div>
+            </li>
+            <% }) %>
+            <% } else { %>
+            <p>No reviews yet.</p>
+            <% } %>
+          </ul>
+          <% if (!noReviews && totalPages> 1) { %>
+          <div class="col-12">
+            <ul class="post-pagination list-unstyled justify-content-start">
+              <% if (currentPage> 1) { %>
+              <li>
+                <a href="/detailsRoom/<%= room._id %>?page=<%= currentPage - 1 %>"><i class="fa-solid fa-arrow-left"></i></a>
+              </li>
+              <% } %>
+
+              <% let startPage=currentPage; let endPage=Math.min(currentPage + 1, totalPages);
+                        if(currentPage===totalPages && currentPage> 1) {
+                        startPage = currentPage - 1;
+                        }
+                        %>
+
+              <% for (let i=startPage; i <=endPage; i++) { %>
+              <li class="<%= i === currentPage ? 'active' : '' %>">
+                <a href="/detailsRoom/<%= room._id %>?page=<%= i %>">
+                  <%= i %>
+                </a>
+              </li>
+              <% } %>
+
+              <% if (currentPage < totalPages) { %>
+              <li>
+                <a href="/detailsRoom/<%= room._id %>?page=<%= currentPage + 1 %>"><i class="fa-solid fa-arrow-right"></i></a>
+              </li>
+              <% } %>
+            </ul>
+          </div>
+          <% } %>
+
+          <style>
+            .post-pagination li {
+              list-style: none;
+            }
+
+            .post-pagination ul {
+              display: flex;
+              justify-content: space-between;
+            }
+
+            /* Reply Styles */
+            .room-details__posts__card__btn {
+              display: flex;
+              gap: 10px;
+              flex-wrap: wrap;
+              margin-top: 15px;
+            }
+
+            .reply-form {
+              margin-top: 15px;
+              padding: 15px;
+              background-color: #f8f9fa;
+              border-radius: 8px;
+              border-left: 4px solid #007bff;
+            }
+
+            .reply-form-inner textarea {
+              width: 100%;
+              min-height: 80px;
+              margin-bottom: 10px;
+              border: 1px solid #ddd;
+              border-radius: 4px;
+              padding: 10px;
+              resize: vertical;
+            }
+
+            .form-actions {
+              display: flex;
+              gap: 10px;
+            }
+
+            .form-actions .solinom-btn {
+              padding: 8px 16px;
+              font-size: 14px;
+            }
+
+            .cancel-reply {
+              background-color: #6c757d !important;
+            }
+
+            .replies-container {
+              margin-top: 15px;
+              padding-left: 20px;
+              border-left: 3px solid #e9ecef;
+            }
+
+            .reply-item {
+              background-color: #f8f9fa;
+              padding: 12px;
+              margin-bottom: 10px;
+              border-radius: 6px;
+              border-left: 3px solid #007bff;
+            }
+
+            .reply-header {
+              display: flex;
+              align-items: center;
+              margin-bottom: 8px;
+              gap: 10px;
+            }
+
+            .reply-avatar {
+              width: 32px;
+              height: 32px;
+              border-radius: 50%;
+            }
+
+            .reply-author {
+              font-weight: 600;
+              color: #333;
+              font-size: 14px;
+            }
+
+            .reply-date {
+              color: #666;
+              font-size: 12px;
+            }
+
+            .reply-content {
+              color: #444;
+              line-height: 1.5;
+              font-size: 14px;
+            }
+
+            .replies-toggle-btn {
+              display: flex;
+              align-items: center;
+              gap: 5px;
+            }
+
+            .toggle-icon {
+              transition: transform 0.3s ease;
+            }
+
+            .toggle-icon.rotated {
+              transform: rotate(180deg);
+            }
+
+            .loading-spinner {
+              text-align: center;
+              padding: 20px;
+              color: #666;
+            }
+
+            @media (max-width: 768px) {
+              .room-details__posts__card__btn {
+                flex-direction: column;
+              }
+
+              .replies-container {
+                padding-left: 10px;
+              }
+            }
+          </style>
+          <script>
+            document.addEventListener('DOMContentLoaded', function() {
+              // Handle Reply Button Click
+              document.querySelectorAll('.reply-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                  const reviewId = this.dataset.reviewId;
+                  const replyForm = document.getElementById(`reply-form-${reviewId}`);
+
+                  if (replyForm.style.display === 'none') {
+                    replyForm.style.display = 'block';
+                    this.textContent = 'Cancel Reply';
+                  } else {
+                    replyForm.style.display = 'none';
+                    this.textContent = 'Reply';
+                  }
+                });
+              });
+
+              // Handle Cancel Reply
+              document.querySelectorAll('.cancel-reply').forEach(btn => {
+                btn.addEventListener('click', function() {
+                  const form = this.closest('.reply-form');
+                  const reviewId = form.id.split('-')[2];
+                  const replyBtn = document.querySelector(`[data-review-id="${reviewId}"].reply-btn`);
+
+                  form.style.display = 'none';
+                  replyBtn.textContent = 'Reply';
+                  form.querySelector('textarea').value = '';
+                });
+              });
+
+              // Handle Reply Form Submission
+              document.querySelectorAll('.reply-form-inner').forEach(form => {
+                form.addEventListener('submit', function(e) {
+                  e.preventDefault();
+
+                  const reviewId = this.dataset.reviewId;
+                  const message = this.querySelector('textarea').value.trim();
+
+                  if (!message) {
+                    alert('Please enter a reply message');
+                    return;
+                  }
+
+                  // Disable form during submission
+                  const submitBtn = this.querySelector('button[type="submit"]');
+                  const originalText = submitBtn.textContent;
+                  submitBtn.disabled = true;
+                  submitBtn.textContent = 'Posting...';
+
+                  fetch('/addReply', {
+                      method: 'POST',
+                      headers: {
+                        'Content-Type': 'application/json',
+                      },
+                      body: JSON.stringify({
+                        reviewId: reviewId,
+                        message: message
+                      })
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                      if (data.success) {
+                        // Clear form and hide it
+                        this.querySelector('textarea').value = '';
+                        document.getElementById(`reply-form-${reviewId}`).style.display = 'none';
+
+                        // Update reply button
+                        const replyBtn = document.querySelector(`[data-review-id="${reviewId}"].reply-btn`);
+                        replyBtn.textContent = 'Reply';
+
+                        // Refresh replies if they're currently visible
+                        const repliesContainer = document.getElementById(`replies-${reviewId}`);
+                        if (repliesContainer.style.display !== 'none') {
+                          loadReplies(reviewId);
+                        }
+
+                        // Update replies count button if it exists
+                        const repliesToggleBtn = document.querySelector(`[data-review-id="${reviewId}"].replies-toggle-btn`);
+                        if (repliesToggleBtn) {
+                          // You might want to refresh the page or update the count dynamically
+                          location.reload();
+                        } else {
+                          // If no replies button exists, you might want to create one or refresh the page
+                          location.reload();
+                        }
+                      } else {
+                        alert('Failed to post reply. Please try again.');
+                      }
+                    })
+                    .catch(error => {
+                      console.error('Error:', error);
+                      alert('An error occurred. Please try again.');
+                    })
+                    .finally(() => {
+                      // Re-enable form
+                      submitBtn.disabled = false;
+                      submitBtn.textContent = originalText;
+                    });
+                });
+              });
+
+              // Handle Replies Toggle
+              document.querySelectorAll('.replies-toggle-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                  const reviewId = this.dataset.reviewId;
+                  const repliesContainer = document.getElementById(`replies-${reviewId}`);
+                  const toggleIcon = this.querySelector('.toggle-icon');
+
+                  if (repliesContainer.style.display === 'none') {
+                    repliesContainer.style.display = 'block';
+                    toggleIcon.classList.add('rotated');
+                    loadReplies(reviewId);
+                  } else {
+                    repliesContainer.style.display = 'none';
+                    toggleIcon.classList.remove('rotated');
+                  }
+                });
+              });
+
+              // Function to load replies
+              function loadReplies(reviewId) {
+                const repliesContainer = document.getElementById(`replies-${reviewId}`);
+                repliesContainer.innerHTML = '<div class="loading-spinner">Loading replies...</div>';
+
+                fetch(`/getReplies/${reviewId}?limit=3`)
+                  .then(response => response.json())
+                  .then(data => {
+                    if (data.success) {
+                      if (data.replies.length > 0) {
+                        repliesContainer.innerHTML = data.replies.map(reply => `
+                                            <div class="reply-item">
+                                                <div class="reply-header">
+                                                    <img src="${reply.userId?.image?.url || '/assets/images/default-avatar.png'}" 
+                                                         alt="avatar" class="reply-avatar">
+                                                    <span class="reply-author">${reply.name}</span>
+                                                    <span class="reply-date">${new Date(reply.createdAt).toLocaleDateString()}</span>
+                                                </div>
+                                                <div class="reply-content">${reply.message}</div>
+                                            </div>
+                                        `).join('');
+                      } else {
+                        repliesContainer.innerHTML = '<p>No replies yet.</p>';
+                      }
+                    } else {
+                      repliesContainer.innerHTML = '<p>Failed to load replies.</p>';
+                    }
+                  })
+                  .catch(error => {
+                    console.error('Error:', error);
+                    repliesContainer.innerHTML = '<p>Error loading replies.</p>';
+                  });
+              }
+            });
+          </script>
+        </div>
+
+
+      </div>
+      <div class="col-lg-4">
+        <div class="room-details__sidebar">
+          <div class="room-details__sidebar__item room-details__sidebar__item--three wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='300ms'>
+            <div class="room-details__sidebar__form">
+              <div class="room-details__sidebar__top">
+                <div class="room-details__sidebar__top__item">
+                  <h4 class="room-details__sidebar__top__title">Book Room</h4>
+                </div>
+              </div>
+              <div class="room-details__sidebar__content">
+                <% const isLoggedIn=!!name; %>
+                <form class="room-details__sidebar__form__inner" action="/booking/add" method="POST" novalidate="novalidate">
+                  <input type="hidden" name="roomId" value="<%= room._id %>">
+
+                  <div class="room-details__sidebar__control">
+                    <label for="checkin">From:</label>
+                    <input id="checkin" type="text" class="form-control" placeholder="Select check-in date" required name="checkin" <%=!isLoggedIn ? 'disabled' : '' %>>
+                    <i class="fa fa-calendar" style="position: absolute; right: 15px; top: 50%; transform: translate(0px,12px);"></i>
+                  </div>
+
+
+                  <div class="room-details__sidebar__control">
+                    <label for="checkout">To:</label>
+                    <input id="checkout" type="text" class="form-control" placeholder="Select check-out date" required name="checkout" <%=!isLoggedIn ? 'disabled' : '' %>>
+                    <i class="fa fa-calendar" style="position: absolute; right: 15px; top: 50%; transform: translate(0px,12px);"></i>
+                  </div>
+
+
+                  <div class="room-details__sidebar__control">
+                    <label for="guests">Guests</label>
+                    <select name="guests" class="form-select w-100" required id="guests" <%=!isLoggedIn ? 'disabled'
+                          : '' %>>
+                      <option value="" disabled selected hidden>Select Guest Count
+                      </option>
+                      <% for (let i=1 ; i <=room.maxGuests; i++) { %>
+                      <option value="<%= i %>">
+                        <%= i %>
+                      </option>
+                      <% } %>
+
+                    </select>
+                    <!-- <i class="fas fa-caret-down" style="position: absolute; right: 15px; top: 44px; cursor: pointer;"></i> -->
+                  </div>
+
+                  <div class="room-details__sidebar__control">
+                    <label for="guests">Add Extra</label>
+                    <ul class="room-details__sidebar__checkbox list-unstyled">
+                      <li>
+                        <input type="checkbox" name="select01" id="select01" <%=!isLoggedIn ? 'disabled' : '' %>>
+                        <label for="select01">Add service per booking
+                          <span>₹<%= room.extraService.perBooking %>.00</span>
+                        </label>
+                      </li>
+                      <li>
+                        <input type="checkbox" name="select02" id="select02" <%=!isLoggedIn ? 'disabled' : '' %>>
+                        <label for="select02">Add service per person
+                          <span>₹<%= room.extraService.perPerson %>.00</span>
+                        </label>
+                      </li>
+
+                      <input type="hidden" id="pricePerNight" name="pricePerNight" value="<%= room.pricePerNight %>">
+                      <input type="hidden" name="extraPerBooking" id="extraPerBooking" value="<%= room.extraService.perBooking %>">
+                      <input type="hidden" name="extraPerPerson" id="extraPerPerson" value="<%= room.extraService.perPerson %>">
+                      <input type="hidden" name="totalPrice" id="totalPrice">
+
+                    </ul>
+                  </div>
+
+
+
+                  <div class="room-details__sidebar__total">
+                    Total: <span id="totalAmount">₹0.00</span>
+                  </div>
+
+
+
+                  <% if (isLoggedIn) { %>
+                  <button type="submit" class="solinom-btn solinom-btn--base">Book
+                    Now</button>
+                  <% } else { %>
+                  <a href="/login" class="solinom-btn solinom-btn--base" style="text-align:center;">Login to
+                    Book</a>
+                  <% } %>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="room-details__sidebar__item room-details__sidebar__item--two wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='300ms'>
+            <h4 class="room-details__sidebar__title">Last Minute</h4>
+            <ul class="room-details__sidebar__posts list-unstyled">
+              <li class="room-details__sidebar__posts__item">
+                <div class="room-details__sidebar__posts__image"> <img src="/assets/images/room/room-s-1-1.jpg" alt="image"> </div>
+                <div class="room-details__sidebar__posts__content">
+                  <span class="room-details__sidebar__posts__price">₹360</span>
+                  <h4 class="room-details__sidebar__posts__title"><a href="#">The Complete Web</a>
+                  </h4>
+                  <div class="room-details__sidebar__posts__star">
+                    <i class="icon-star1"></i>
+                    <i class="icon-star1"></i>
+                    <i class="icon-star1"></i>
+                    <i class="icon-star1"></i>
+                    <i class="icon-star1"></i>
+                  </div>
+                </div>
+              </li>
+              <li class="room-details__sidebar__posts__item">
+                <div class="room-details__sidebar__posts__image"> <img src="/assets/images/room/room-s-1-2.jpg" alt="image"> </div>
+                <div class="room-details__sidebar__posts__content">
+                  <span class="room-details__sidebar__posts__price">₹340</span>
+                  <h4 class="room-details__sidebar__posts__title"><a href="#">The Complete
+                      Room</a></h4>
+                  <div class="room-details__sidebar__posts__star">
+                    <i class="icon-star1"></i>
+                    <i class="icon-star1"></i>
+                    <i class="icon-star1"></i>
+                    <i class="icon-star1"></i>
+                    <i class="icon-star1"></i>
+                  </div>
+                </div>
+              </li>
+              <li class="room-details__sidebar__posts__item">
+                <div class="room-details__sidebar__posts__image"> <img src="/assets/images/room/room-s-1-3.jpg" alt="image"> </div>
+                <div class="room-details__sidebar__posts__content">
+                  <span class="room-details__sidebar__posts__price">₹500</span>
+                  <h4 class="room-details__sidebar__posts__title"><a href="#">The Complete
+                      Hotel</a></h4>
+                  <div class="room-details__sidebar__posts__star">
+                    <i class="icon-star1"></i>
+                    <i class="icon-star1"></i>
+                    <i class="icon-star1"></i>
+                    <i class="icon-star1"></i>
+                    <i class="icon-star1"></i>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="room-details__item wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='300ms'>
+        <div class="room-details__review">
+          <% if(name){ %>
+          <h3 class="room-details__title">Add a Review</h3>
+          <form class="room-details__review__form contact-form-validated form-one wow fadeInUp" data-wow-duration="1500ms" action="/addReviews" method="POST">
+            <div class="room-details__review__star">
+              <div class="room-details__review__item">
+                <span>Service</span>
+                <div class="room-details__review__star solinom-ratings service-rating">
+                  <i class="far fa-star" data-value="1"></i>
+                  <i class="far fa-star" data-value="2"></i>
+                  <i class="far fa-star" data-value="3"></i>
+                  <i class="far fa-star" data-value="4"></i>
+                  <i class="far fa-star" data-value="5"></i>
+                  <input type="hidden" name="serviceRating" class="rating" required>
+                </div>
+              </div>
+              <div class="room-details__review__item">
+                <span>Locations</span>
+                <div class="room-details__review__star solinom-ratings location-rating">
+                  <i class="far fa-star" data-value="1"></i>
+                  <i class="far fa-star" data-value="2"></i>
+                  <i class="far fa-star" data-value="3"></i>
+                  <i class="far fa-star" data-value="4"></i>
+                  <i class="far fa-star" data-value="5"></i>
+                  <input type="hidden" name="locationRating" class="rating">
+                </div>
+              </div>
+              <div class="room-details__review__item">
+                <span>Amenities</span>
+                <div class="room-details__review__star solinom-ratings amenities-rating">
+                  <i class="far fa-star" data-value="1"></i>
+                  <i class="far fa-star" data-value="2"></i>
+                  <i class="far fa-star" data-value="3"></i>
+                  <i class="far fa-star" data-value="4"></i>
+                  <i class="far fa-star" data-value="5"></i>
+                  <input type="hidden" name="amenitiesRating" class="rating">
+                </div>
+              </div>
+              <div class="room-details__review__item">
+                <span>Prices</span>
+                <div class="room-details__review__star solinom-ratings prices-rating">
+                  <i class="far fa-star" data-value="1"></i>
+                  <i class="far fa-star" data-value="2"></i>
+                  <i class="far fa-star" data-value="3"></i>
+                  <i class="far fa-star" data-value="4"></i>
+                  <i class="far fa-star" data-value="5"></i>
+                  <input type="hidden" name="pricesRating" class="rating" value="">
+                </div>
+              </div>
+              <div class="room-details__review__item">
+                <span>Food</span>
+                <div class="room-details__review__star solinom-ratings food-rating">
+                  <i class="far fa-star" data-value="1"></i>
+                  <i class="far fa-star" data-value="2"></i>
+                  <i class="far fa-star" data-value="3"></i>
+                  <i class="far fa-star" data-value="4"></i>
+                  <i class="far fa-star" data-value="5"></i>
+                  <input type="hidden" name="foodRating" class="rating" value="">
+                </div>
+              </div>
+            </div>
+            <div class="form-one__group">
+              <div class="form-one__control">
+                <input type="text" name="name" value="<%= user && user.name ? user.name.split(' ').map(n => n.charAt(0).toUpperCase() + n.slice(1)).join(' ') : '' %>" placeholder="Enter Your Name" required>
+              </div>
+              <div class="form-one__control">
+                <input type="email" name="email" placeholder="Enter Your Email" required value="<%= user && user.email ? user.email.trim() : '' %>">
+              </div>
+              <div class="form-one__control form-one__control--full">
+                <textarea name="message" placeholder="Write a Message" required></textarea>
+              </div>
+
+              <div class="form-one__control">
+                <button type="submit" class="solinom-btn solinom-btn--base">Submit
+                  Review</button>
+              </div>
+              <input type="hidden" name="roomId" value="<%= room._id %>">
+            </div>
+          </form>
+
+          <script>
+            document.addEventListener('DOMContentLoaded', function() {
+              const form = document.querySelector('form.room-details__review__form');
+              if (form) {
+                let submitted = false;
+
+                form.addEventListener('submit', function(e) {
+                  if (submitted) {
+                    e.preventDefault(); // Stop second submission
+                    return;
+                  }
+
+                  submitted = true;
+
+                  // Optional: disable button and change text for better UX
+                  const submitBtn = form.querySelector('button[type="submit"]');
+                  if (submitBtn) {
+                    submitBtn.disabled = true;
+                    submitBtn.innerText = 'Submitting...';
+                  }
+
+                  // Always reload the page no matter what
+                  location.reload();
+                });
+              }
+            });
+          </script>
+
+
+          <% } else { %>
+          <p>Please <a href="/login">log in</a> to leave a review.</p>
+          <% } %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<section class="feature-one">
+  <div class="container">
+    <div class="sec-title text-center">
+
+      <img src="/assets/images/shapes/sec-title-s-1.png" alt="FEATURED ROOMS" class="sec-title__img">
+
+
+      <h6 class="sec-title__tagline bw-split-in-right">FEATURED ROOMS</h6>
+
+      <h3 class="sec-title__title bw-split-in-up">Similar Rooms </h3>
+    </div>
+    <div class="row gutter-y-30">
+      <div class="col-lg-4 col-md-6">
+        <div class="room-card-two wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='200ms'>
+          <div class="room-card-two__thumb">
+            <img src="/assets/images/room/room-2-1.jpg" alt="Deluxe Room">
+            <p class="room-card-two__feature ">feature</p>
+            <div class="room-card-two__love">
+              <i class="icon-Heart"></i>
+            </div>
+          </div>
+          <div class="room-card-two__content">
+            <div class="room-card-two__content__top">
+              <div class="room-card-two__content__popup">
+                <a href="https://www.youtube.com/watch?v=4jnzf1yj48M" class="room-card-two__content__popup__item video-popup">
+                  <i class="icon-video-camera-1-1"></i>
+                </a>
+                <a href="/assets/images/room/room-2-1.jpg" class="room-card-two__content__popup__item img-popup">
+                  <i class="icon-photo-camera-1"></i>
+                </a>
+              </div>
+            </div>
+            <div class="room-card-two__content__star">
+              <i class="icon-star1"></i>
+              <i class="icon-star1"></i>
+              <i class="icon-star1"></i>
+              <i class="icon-star1"></i>
+              <i class="icon-star1"></i>
+            </div>
+            <h4 class="room-card-two__content__title"><a href="deluxe-room-details.html">Deluxe Room</a>
+            </h4>
+            <div class="room-card-two__content__text__box">
+              <p class="room-card-two__content__text">There are many variations of passages of Lorem
+                Ipsum aagtilable</p>
+            </div>
+            <div class="room-card-two__content__number">
+              <div class="room-card-two__content__number__price">₹120<span>/night</span></div>
+              <p class="room-card-two__content__number__parson">Person: <strong>10</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="room-card-two wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='400ms'>
+          <div class="room-card-two__thumb">
+            <img src="/assets/images/room/room-2-2.jpg" alt="Triple Room">
+            <p class="room-card-two__feature room-card-two__feature--two">30% Off</p>
+            <div class="room-card-two__love">
+              <i class="icon-Heart"></i>
+            </div>
+          </div>
+          <div class="room-card-two__content">
+            <div class="room-card-two__content__top">
+              <div class="room-card-two__content__popup">
+                <a href="https://www.youtube.com/watch?v=4jnzf1yj48M" class="room-card-two__content__popup__item video-popup">
+                  <i class="icon-video-camera-1-1"></i>
+                </a>
+                <a href="/assets/images/room/room-2-2.jpg" class="room-card-two__content__popup__item img-popup">
+                  <i class="icon-photo-camera-1"></i>
+                </a>
+              </div>
+            </div>
+            <div class="room-card-two__content__star">
+              <i class="icon-star1"></i>
+              <i class="icon-star1"></i>
+              <i class="icon-star1"></i>
+              <i class="icon-star1"></i>
+              <i class="icon-star1"></i>
+            </div>
+            <h4 class="room-card-two__content__title"><a href="deluxe-room-details.html">Triple Room</a>
+            </h4>
+            <div class="room-card-two__content__text__box">
+              <p class="room-card-two__content__text">There are many variations of passages of Lorem
+                Ipsum aagtilable</p>
+            </div>
+            <div class="room-card-two__content__number">
+              <div class="room-card-two__content__number__price">₹130<span>/night</span></div>
+              <p class="room-card-two__content__number__parson">Person: <strong>10</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="room-card-two wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='600ms'>
+          <div class="room-card-two__thumb">
+            <img src="/assets/images/room/room-2-3.jpg" alt="Master Suite Room">
+            <p class="room-card-two__feature ">feature</p>
+            <div class="room-card-two__love">
+              <i class="icon-Heart"></i>
+            </div>
+          </div>
+          <div class="room-card-two__content">
+            <div class="room-card-two__content__top">
+              <div class="room-card-two__content__popup">
+                <a href="https://www.youtube.com/watch?v=4jnzf1yj48M" class="room-card-two__content__popup__item video-popup">
+                  <i class="icon-video-camera-1-1"></i>
+                </a>
+                <a href="/assets/images/room/room-2-3.jpg" class="room-card-two__content__popup__item img-popup">
+                  <i class="icon-photo-camera-1"></i>
+                </a>
+              </div>
+            </div>
+            <div class="room-card-two__content__star">
+              <i class="icon-star1"></i>
+              <i class="icon-star1"></i>
+              <i class="icon-star1"></i>
+              <i class="icon-star1"></i>
+              <i class="icon-star1"></i>
+            </div>
+            <h4 class="room-card-two__content__title"><a href="deluxe-room-details.html">Master Suite
+                Room</a></h4>
+            <div class="room-card-two__content__text__box">
+              <p class="room-card-two__content__text">There are many variations of passages of Lorem
+                Ipsum aagtilable</p>
+            </div>
+            <div class="room-card-two__content__number">
+              <div class="room-card-two__content__number__price">₹200<span>/night</span></div>
+              <p class="room-card-two__content__number__parson">Person: <strong>10</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%- include("../layouts/footer.ejs") %>

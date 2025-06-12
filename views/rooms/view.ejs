@@ -1,0 +1,94 @@
+<%- include('../admin/header.ejs') %>
+    <!-- This is used to include another ejs file content in another file -->
+
+    <%- include('../admin/sidebar.ejs') %>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1 class="m-0 text-dark">Room Details</h1>
+                        </div><!-- /.col -->
+                        <div class="col-sm-6">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item active">View Page</li>
+                            </ol>
+                        </div><!-- /.col -->
+                    </div><!-- /.row -->
+                </div><!-- /.container-fluid -->
+            </div>
+            <!-- /.content-header -->
+
+            <!-- Main content -->
+            <div class="content">
+                <div class="container-fluid">
+                    <div class="card">
+                        <!-- <div class="card-header">
+                            <h2>Edit Rooms</h2>
+
+                        </div> -->
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            <h3>
+                                <%= room.title %>
+                            </h3>
+                            <p style="text-align: justify;"><strong>Description: </strong>
+                                <br>
+                                <%= room.description %>
+                            </p>
+                            <p><strong>Price Per Night: </strong> ₹<%= room.pricePerNight %>
+                            </p>
+                            <p><strong>Max Guests: </strong>
+                                <%= room.maxGuests %>
+                            </p>
+                            <p><strong>Duration (days): </strong>
+                                <%= room.durationDays %>
+                            </p>
+                            <p><strong>Total Guests Served: </strong>
+                                <%= room.totalGuestsServed %>
+                            </p>
+                            <p><strong>Rating: </strong>
+                                <%= room.rating %> (<%= room.reviewsCount %> reviews)
+                            </p>
+                            <p><strong>Featured: </strong>
+                                <%= room.isFeatured ? "Yes" : "No" %>
+                            </p>
+                            <p><strong>Amenities: </strong></p>
+                            <ul>
+                                <% room.amenities.forEach(amenity=> { %>
+                                    <li>
+                                        <%= amenity %>
+                                    </li>
+                                    <% }) %>
+                            </ul>
+                            <p><strong>Extra Service Per Booking: </strong> ₹<%= room.extraService.perBooking %>
+                            </p>
+                            <p><strong>Extra Service Per Person: </strong> ₹<%= room.extraService.perPerson %>
+                            </p>
+                            <p><strong>Image: </strong></p>
+                            <img src="<%= room.image.url %>" alt="Room Image" style="max-width: 300px;" />
+
+                            <hr>
+                            <!-- <br> -->
+
+                            <a href="/roomEdit/<%= room._id %>" class="btn btn-success">Edit</a>
+                            <a href="/roomDelete/<%= room._id %>" class="btn btn-danger">Delete</a>
+                            <a href="/rooms/display" class="btn btn-secondary">Back to List</a>
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                    <!-- /.card -->
+                </div><!-- /.container-fluid -->
+            </div>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+
+        ->
+
+
+        <%- include('../admin/footer.ejs') %>

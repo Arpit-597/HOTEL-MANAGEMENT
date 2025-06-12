@@ -1,0 +1,119 @@
+<%- include("../admin/header.ejs") %>
+<%- include("../admin/sidebar.ejs") %>
+
+<div class="content-wrapper">
+  <!-- Content Header -->
+  <div class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1 class="m-0 text-dark">My Booking</h1>
+        </div>
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active">My Booking</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main content -->
+  <div class="content">
+    <div class="container-fluid">
+      <% if(success.length>0){%>
+      <div class="alert alert-success">
+        <%= success %>
+      </div>
+      <%}%>
+      <% if(error.length>0){%>
+      <div class="alert alert-danger">
+        <%= error %>
+      </div>
+      <%}%>
+      <h2 class="mb-4 text-center">Welcome, <%= name %>! Your Bookings</h2>
+      <% if (bookings.length===0) { %>
+      <div class="alert alert-info text-center">You have no bookings yet.</div>
+      <% } else { %>
+      <div class="mb-3 text-end">
+        <input type="text" id="searchInput" class="form-control w-25 d-inline" placeholder="Search Room...">
+      </div>
+      <div class="table-responsive">
+        <table class="table table-bordered table-hover mt-4">
+          <thead class="table-dark">
+            <tr>
+              <th>#</th>
+              <th>Room</th>
+              <th>Check-in</th>
+              <th>Check-out</th>
+              <th>Guests</th>
+              <th>Total</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% bookings.forEach((booking, index)=> { %>
+            <tr>
+              <td>
+                <%= index + 1 %>
+              </td>
+              <td>
+                <%= booking.room.title %>
+              </td>
+              <td>
+                <%= booking.checkInDate.toDateString() %>
+              </td>
+              <td>
+                <%= booking.checkOutDate.toDateString() %>
+              </td>
+              <td>
+                <%= booking.guestCount %>
+              </td>
+              <td>₹<%= booking.totalAmount.toFixed(2) %>
+              </td>
+              <td>
+                <% if (booking.status==='confirmed' ) { %>
+                <span class="badge bg-success">Confirmed</span>
+                <% } else if (booking.status==='cancelled' ) { %>
+                <span class="badge bg-danger">Cancelled</span>
+                <% } else if(booking.status==="pending" ) { %>
+                <span class="badge bg-warning text-dark"> Pending </span>
+                <% } else { %>
+                <span class="badge bg-primary"><%= booking.status.charAt(0).toUpperCase() + booking.status.slice(1) %> </span>
+                <% } %>
+              </td>
+              <td>
+                <% if (booking.status !=='cancelled' ) { %>
+                <a href="/bookings/cancel/<%= booking._id %>" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to cancel this booking?');">
+                  Cancel
+                </a>
+                <% } %>
+                <a href="/bookings/invoice/<%= booking._id %>" class="btn btn-sm btn-outline-primary">Download
+                  Invoice</a>
+              </td>
+            </tr>
+            <% }); %>
+          </tbody>
+        </table>
+
+      </div>
+      <% } %>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  document.getElementById('searchInput').addEventListener('keyup', function() {
+    const search = this.value.toLowerCase();
+    const rows = document.querySelectorAll('#bookingTable tbody tr');
+    rows.forEach(row => {
+      const roomName = row.children[1].textContent.toLowerCase();
+      row.style.display = roomName.includes(search) ? '' : 'none';
+    });
+  });
+</script>
+
+<%- include("../admin/footer.ejs") %>

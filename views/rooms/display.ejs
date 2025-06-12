@@ -1,0 +1,177 @@
+<%- include('../admin/header.ejs') %>
+    <!-- This is used to include another ejs file content in another file -->
+
+    <%- include('../admin/sidebar.ejs') %>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1 class="m-0 text-dark">Rooms Display</h1>
+                        </div><!-- /.col -->
+                        <div class="col-sm-6">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item active">Rooms Page</li>
+                            </ol>
+                        </div><!-- /.col -->
+                    </div><!-- /.row -->
+                </div><!-- /.container-fluid -->
+            </div>
+            <!-- /.content-header -->
+
+            <!-- Main content -->
+            <d iv class="content">
+                <div class="container-fluid">
+                    <div class="card">
+                        <div class="card-header">
+                            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-default">
+                                Add Rooms
+                            </button>
+                            <% if(success.length>0){ %>
+                                <div class="alert alert-success">
+                                    <%= success %>
+                                </div>
+                                <% } %>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            <table id="example1" class="table table-bordered table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Room Title</th>
+                                        <th>Description</th>
+                                        <th>Price Per Night</th>
+                                        <th>Max Guests</th>
+                                        <th>Rating</th>
+                                        <th>Image</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <% rooms.forEach((room)=>{ %>
+                                        <tr>
+                                            <td>
+                                                <%= room.title %>
+                                            </td>
+                                            <td>
+                                                <%= room.description %>
+                                            </td>
+                                            <td>(₹<%= room.pricePerNight %>/night)</td>
+                                            <td>
+                                                <%= room.maxGuests %>
+                                            </td>
+                                            <td>
+                                                <%= room.rating %>
+                                            </td>
+                                            <td>
+                                                <img src=" <%= room.image.url %>" alt="Room Image" width="100">
+                                            </td>
+                                            <td>
+                                                <a href="/roomView/<%= room._id %>" class="btn btn-info">View</a>
+                                                <a href="/roomEdit/<%= room._id %>" class="btn btn-success">Edit</a>
+                                                <a href="/roomDelete/<%= room._id %>" class="btn btn-danger">Delete</a>
+                                            </td>
+                                        </tr>
+                                        <% }) %>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <th>Room Title</th>
+                                        <th>Description</th>
+                                        <th>Price Per Night</th>
+                                        <th>Max Guests</th>
+                                        <th>Rating</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                    <!-- /.card -->
+                </div><!-- /.container-fluid -->
+        </div>
+        <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+
+        <!-- modal add student -->
+        <div class="modal fade" id="modal-default">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Add Room</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="/rooms/add" method="POST" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <label>Room Title</label>
+                                <input type="text" name="title" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Description</label>
+                                <textarea name="description" class="form-control"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>Price Per Night</label>
+                                <input type="number" name="pricePerNight" required class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Max Guests</label>
+                                <input type="number" name="maxGuests" required class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Duration (days)</label>
+                                <input type="number" name="durationDays" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Total Guests Served</label>
+                                <input type="number" name="totalGuestsServed" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Rating</label>
+                                <input type="number" step="0.1" name="rating" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Reviews Count</label>
+                                <input type="number" name="reviewsCount" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Is Featured?</label>
+                                <input type="checkbox" name="isFeatured" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Amenities (comma-separated)</label>
+                                <input type="text" name="amenities" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Extra Service Per Booking</label>
+                                <input type="number" name="extraPerBooking" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Extra Service Per Person</label>
+                                <input type="number" name="extraPerPerson" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Image</label>
+                                <input type="file" name="image" class="form-control">
+                            </div>
+                            <button type="submit" class="btn btn-info">Add Room</button>
+                        </form>
+                    </div>
+                    <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+            </div>
+        </div>
+        <!-- /.modal -->
+
+
+        <%- include('../admin/footer.ejs') %>
