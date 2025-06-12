@@ -7,8 +7,8 @@ const PDFDocument = require("pdfkit");
 const UserModel = require("../models/user")
 
 const razorpay = new Razorpay({
-  key_id: "rzp_test_ZNNBTbSkKxhAFE", // Remove this
-  key_secret: "uGxlfUKhh6ThwebOmfFFnltA", // Remove this
+  key_id: process.env.RAZORPAY_KEY_ID,
+  key_secret: process.env.RAZORPAY_KEY_SECRET,
 });
 
 // const BookingModel = require("../models/Booking")

@@ -7,9 +7,9 @@ const BookingModel = require("../models/booking");
 
 //setup
 cloudinary.config({
-  cloud_name: "ddxdxst4k",
-  api_key: "713535443456214",
-  api_secret: "WITOG14o78cRWah2Gy1TSscnRsc",
+  cloud_name: process.env.cloudinary_name,
+  api_key: process.env.cloudinary_api_key,
+  api_secret: process.env.cloudinary_api_secret,
 });
 
 class AdminController {

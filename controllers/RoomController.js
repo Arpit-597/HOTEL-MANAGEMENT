@@ -7,9 +7,9 @@ const ReplyModel = require("../models/reply"); // Add this import
 const UserModel = require("../models/user");
 //setup
 cloudinary.config({
-  cloud_name: "ddxdxst4k",
-  api_key: "652155751238188",
-  api_secret: "PB9N2xN21GU75IQHGJd_whZl7y4",
+  cloud_name: process.env.cloudinary_name,
+  api_key: process.env.cloudinary_api_key,
+  api_secret: process.env.cloudinary_api_secret,
 });
 
 class RoomController {
